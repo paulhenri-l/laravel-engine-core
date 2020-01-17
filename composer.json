@@ -1,0 +1,25 @@
+{
+    "name": "paulhenri-l/laravel-engine",
+    "description": "A Laravel package to help you create Laravel packages",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "paulhenri-l",
+            "email": "25308170+paulhenri-l@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PaulhenriL\\LaravelEngine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PaulhenriL\\LaravelEngine\\Tests": "tests/"
+        }
+    }
+}
