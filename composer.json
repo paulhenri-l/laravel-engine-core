@@ -19,7 +19,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "PaulhenriL\\LaravelEngine\\Tests": "tests/"
+            "PaulhenriL\\LaravelEngine\\Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.5"
     }
 }
