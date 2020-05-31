@@ -7,6 +7,12 @@ use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
 
 class FakeEngineServiceProvider extends EngineServiceProvider
 {
+    public function register()
+    {
+        // Helpers
+        $this->registerHelpers();
+    }
+
     public function boot()
     {
         // Routes

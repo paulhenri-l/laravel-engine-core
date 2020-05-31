@@ -15,6 +15,7 @@ package's code instead of the framework internals.
 ## Functionality
 
 ### Routes
+### Helpers
 
 ## TODO
 
@@ -23,5 +24,4 @@ package's code instead of the framework internals.
 - Assets symlink
 - Install command
 - Install tasks
-- Load helpers
 - Add namespace functions for every common namespace

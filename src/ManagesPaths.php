@@ -41,4 +41,16 @@ trait ManagesPaths
 
         return $this->basePath('routes' . $extra);
     }
+
+    /**
+     * Return the engine's helpers path and add the given extra path if needed.
+     */
+    public function helpersPath(string $extra = null): string
+    {
+        $extra = $extra
+            ? Str::start($extra, '/')
+            : '';
+
+        return $this->basePath('helpers' . $extra);
+    }
 }

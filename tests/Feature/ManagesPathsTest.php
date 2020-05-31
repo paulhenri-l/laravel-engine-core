@@ -47,4 +47,25 @@ class ManagesPathsTest extends TestCase
             $this->engine->routesPath('web.php')
         );
     }
+
+    public function test_the_helpers_path()
+    {
+        $this->assertEquals(
+            realpath(__DIR__ . '/../FakeEngine/helpers'),
+            $this->engine->helpersPath()
+        );
+    }
+
+    public function test_you_can_append_an_extra_path_to_the_helpers_path()
+    {
+        $this->assertEquals(
+            realpath(__DIR__ . '/../FakeEngine/helpers/helpers.php'),
+            $this->engine->helpersPath('/helpers.php')
+        );
+
+        $this->assertEquals(
+            realpath(__DIR__ . '/../FakeEngine/helpers/helpers.php'),
+            $this->engine->helpersPath('helpers.php')
+        );
+    }
 }

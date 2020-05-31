@@ -9,7 +9,8 @@ class EngineServiceProvider extends ServiceProvider
 {
     use ManagesRoutes,
         ManagesNames,
-        ManagesPaths;
+        ManagesPaths,
+        ManagesHelpers;
 
     /**
      * The engine's reflection.
