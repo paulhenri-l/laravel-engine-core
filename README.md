@@ -19,9 +19,27 @@ package's code instead of the framework internals.
 
 ## TODO
 
-- Assets autoloading
-- Middlewares
+- Manage Middlewares and middleware groups
+- Load commands
+- Schedule tasks
+- Register listeners
+- Load translations
+- Load migrations
+- Load views
+- Load private views
+- Load view components?
+- Publishable groups
 - Assets symlink
-- Install command
+- Assets autoloading
+- Install command (publish + tasks)
+- Facades
 - Install tasks
+- Config files
 - Add namespace functions for every common namespace
+- Add helpers to get the engine's name everywhere
+- Check if we can isolate everything (cache, session etc...) but it might not be needed
+
+## TODO Dev experience
+- Assets compilation (install console or skeleton)
+- Generators (console)
+- Database factories
