@@ -6,9 +6,25 @@ use PaulhenriL\LaravelEngine\Tests\FakeEngine\FakeEngineServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    /**
-     * Load any needed package providers in the test application.
-     */
+    /* @var FakeEngineServiceProvider */
+    protected $engine;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->engine = new FakeEngineServiceProvider($this->app);
+    }
+
+    protected function resolveApplicationConfiguration($app)
+    {
+        parent::resolveApplicationConfiguration($app);
+
+        $app->make('config')->set(
+            'app.key', '00000000000000000000000000000000'
+        );
+    }
+
     protected function getPackageProviders($app)
     {
         return [
