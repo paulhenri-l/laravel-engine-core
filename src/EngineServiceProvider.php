@@ -18,11 +18,6 @@ class EngineServiceProvider extends ServiceProvider
      */
     protected $reflectedEngine;
 
-    // Middlewares
-    // Assets symlink
-    // Install command
-    // Install tasks
-    // Load helpers
 
     /**
      * Return the engine's reflection.

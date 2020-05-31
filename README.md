@@ -11,3 +11,17 @@ config from your package. All of that with unit testing is baked in!
 
 Everything you may want will be one function call away letting you focus on your
 package's code instead of the framework internals.
+
+## Functionality
+
+### Routes
+
+## TODO
+
+- Assets autoloading
+- Middlewares
+- Assets symlink
+- Install command
+- Install tasks
+- Load helpers
+- Add namespace functions for every common namespace

@@ -60,5 +60,4 @@ trait ManagesNames
 
         return $this->getNamespace('Controllers' . $extra);
     }
-    // Add functions for every common namespace
 }
