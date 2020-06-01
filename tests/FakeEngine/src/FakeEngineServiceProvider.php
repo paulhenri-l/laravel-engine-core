@@ -3,6 +3,7 @@
 namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands\HelloWorld;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
 
 class FakeEngineServiceProvider extends EngineServiceProvider
@@ -26,5 +27,8 @@ class FakeEngineServiceProvider extends EngineServiceProvider
             'custom-routes',
             'custom_routes.'
         );
+
+        // Commands
+        $this->loadCommand(HelloWorld::class);
     }
 }
