@@ -3,6 +3,7 @@
 namespace PaulhenriL\LaravelEngine;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use ReflectionClass;
 
 class EngineServiceProvider extends ServiceProvider
@@ -14,7 +15,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesCommands,
         ManagesListeners,
         ManagesTranslations,
-        ManagesMigrations;
+        ManagesMigrations,
+        ManagesConfig;
 
     /**
      * The engine's reflection.
@@ -22,6 +24,14 @@ class EngineServiceProvider extends ServiceProvider
      * @var ReflectionClass
      */
     protected $reflectedEngine;
+
+    /**
+     * The engine's configuration publishable config group.
+     */
+    protected function configGroup(): string
+    {
+        return Str::snake($this->getEngineName()) . '_config';
+    }
 
     /**
      * Return the engine's reflection.

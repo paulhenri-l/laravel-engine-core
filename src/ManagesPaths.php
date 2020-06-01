@@ -69,4 +69,16 @@ trait ManagesPaths
     {
         return $this->basePath('migrations');
     }
+
+    /**
+     * Return the engine's config path and add the given extra path if needed.
+     */
+    protected function configPath(string $extra = null): string
+    {
+        $extra = $extra
+            ? Str::start($extra, '/')
+            : '';
+
+        return $this->basePath('config' . $extra);
+    }
 }

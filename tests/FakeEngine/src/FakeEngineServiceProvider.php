@@ -15,6 +15,10 @@ class FakeEngineServiceProvider extends EngineServiceProvider
     {
         // Helpers
         $this->registerHelpers();
+
+        // Config
+        $this->registerConfig();
+        $this->registerConfig('other_config');
     }
 
     public function boot()

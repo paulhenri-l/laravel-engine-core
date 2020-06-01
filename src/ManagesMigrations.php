@@ -7,7 +7,7 @@ trait ManagesMigrations
     /**
      * Load all the translations available in the engine's lang directory.
      */
-    public function loadMigrations(string $namespace = null)
+    public function loadMigrations(): void
     {
         $this->loadMigrationsFrom(
             $this->migrationsPath()
