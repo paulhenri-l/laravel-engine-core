@@ -1,5 +1,7 @@
 # laravel-engine
 
+![Tests](https://github.com/paulhenri-l/laravel-engine/workflows/Tests/badge.svg)
+
 A Laravel package to help you create Laravel packages.
 
 Laravel engine goal is to provide you with the tools to efficiently and easily
