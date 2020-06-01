@@ -20,8 +20,6 @@ package's code instead of the framework internals.
 ## TODO
 
 - Manage Middlewares and middleware groups
-- Load commands
-- Schedule tasks
 - Register listeners
 - Load translations
 - Load migrations

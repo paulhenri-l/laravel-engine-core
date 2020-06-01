@@ -2,6 +2,7 @@
 
 namespace PaulhenriL\LaravelEngine\Tests;
 
+use Illuminate\Contracts\Console\Kernel;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\FakeEngineServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -30,5 +31,15 @@ class TestCase extends \Orchestra\Testbench\TestCase
         return [
             FakeEngineServiceProvider::class
         ];
+    }
+
+    protected function getEnvironmentSetUp($app)
+    {
+        parent::getEnvironmentSetUp($app);
+
+        // Prevents an awful bug from happening. Without this line The Kernel
+        // instance use by the EngineService provider won't be the same as the
+        // one used in the TestCase. (This issue only happens with orchestra)
+        $app->make(Kernel::class);
     }
 }
