@@ -4,7 +4,7 @@ namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands;
 
 use Illuminate\Console\Command;
 
-class HelloWorld extends Command
+class HelloWorldCommand extends Command
 {
     protected $signature = 'fake-engine:hello-world';
 

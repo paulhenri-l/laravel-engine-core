@@ -9,7 +9,7 @@ trait ManagesCommands
     /**
      * Load the given commands in the parent application.
      */
-    public function loadCommand(string ...$commands)
+    public function loadCommand(string ...$commands): void
     {
         if (!$this->app->runningInConsole()) {
             return;
@@ -21,7 +21,7 @@ trait ManagesCommands
     /**
      * Apply the given function on the scheduler.
      */
-    public function editSchedule(callable $editor)
+    public function editSchedule(callable $editor): void
     {
         if (!$this->app->runningInConsole()) {
             return;

@@ -4,6 +4,8 @@ namespace PaulhenriL\LaravelEngine\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\FakeEngineServiceProvider;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -15,6 +17,14 @@ class TestCase extends \Orchestra\Testbench\TestCase
         parent::setUp();
 
         $this->engine = new FakeEngineServiceProvider($this->app);
+    }
+
+    protected function tearDown(): void
+    {
+        HelloWorldListener::$called = false;
+        HelloWorldSubscriber::$called = false;
+
+        parent::tearDown();
     }
 
     protected function resolveApplicationConfiguration($app)

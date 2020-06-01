@@ -4,8 +4,10 @@ namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands\HelloWorld;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands\HelloWorldCommand;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 
 class FakeEngineServiceProvider extends EngineServiceProvider
 {
@@ -30,9 +32,13 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         );
 
         // Commands
-        $this->loadCommand(HelloWorld::class);
+        $this->loadCommand(HelloWorldCommand::class);
         $this->editSchedule(function (Schedule $schedule) {
             $schedule->command('fake-package:hello-world')->everyMinute();
         });
+
+        // Listeners / Subscribers
+        $this->addListener('fake-engine:fake-event', HelloWorldListener::class);
+        $this->addSubscriber(HelloWorldSubscriber::class);
     }
 }

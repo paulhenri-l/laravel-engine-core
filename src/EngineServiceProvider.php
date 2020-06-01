@@ -11,7 +11,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesNames,
         ManagesPaths,
         ManagesHelpers,
-        ManagesCommands;
+        ManagesCommands,
+        ManagesListeners;
 
     /**
      * The engine's reflection.
@@ -19,7 +20,6 @@ class EngineServiceProvider extends ServiceProvider
      * @var ReflectionClass
      */
     protected $reflectedEngine;
-
 
     /**
      * Return the engine's reflection.
