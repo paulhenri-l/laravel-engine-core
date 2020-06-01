@@ -34,6 +34,12 @@ class TestCase extends \Orchestra\Testbench\TestCase
         $app->make('config')->set(
             'app.key', '00000000000000000000000000000000'
         );
+
+        $app->make('config')->set('database.default', 'sqlite');
+        $app->make('config')->set('database.connections.sqlite', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+        ]);
     }
 
     protected function getPackageProviders($app)

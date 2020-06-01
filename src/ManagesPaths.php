@@ -61,4 +61,12 @@ trait ManagesPaths
     {
         return $this->basePath('resources/lang');
     }
+
+    /**
+     * Return the engine's migrations path.
+     */
+    protected function migrationsPath(): string
+    {
+        return $this->basePath('migrations');
+    }
 }

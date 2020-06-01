@@ -20,8 +20,6 @@ package's code instead of the framework internals.
 ## TODO
 
 - Manage Middlewares and middleware groups
-- Load translations
-- Load migrations
 - Load views
 - Load private views
 - Load view components?
@@ -35,6 +33,10 @@ package's code instead of the framework internals.
 - Add namespace functions for every common namespace
 - Add helpers to get the engine's name everywhere
 - Check if we can isolate everything (cache, session etc...) but it might not be needed
+
+## TODO After that
+
+- Translations should be publishable
 
 ## TODO Dev experience
 - Assets compilation (install console or skeleton)

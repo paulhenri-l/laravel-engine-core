@@ -44,5 +44,8 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         // Translations
         $this->loadTranslations();
         $this->loadTranslations('CustomNamespace');
+
+        // Migrations
+        $this->loadMigrations();
     }
 }
