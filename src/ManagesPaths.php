@@ -16,7 +16,7 @@ trait ManagesPaths
     /**
      * Return the engine's path and add the given extra path if needed.
      */
-    public function basePath(string $extra = null): string
+    protected function basePath(string $extra = null): string
     {
         if (!$this->engineBasePath) {
             $engineBasePath = $this->getReflectedEngine()->getFileName();
@@ -33,7 +33,7 @@ trait ManagesPaths
     /**
      * Return the engine's routes path and add the given extra path if needed.
      */
-    public function routesPath(string $extra = null): string
+    protected function routesPath(string $extra = null): string
     {
         $extra = $extra
             ? Str::start($extra, '/')
@@ -45,12 +45,20 @@ trait ManagesPaths
     /**
      * Return the engine's helpers path and add the given extra path if needed.
      */
-    public function helpersPath(string $extra = null): string
+    protected function helpersPath(string $extra = null): string
     {
         $extra = $extra
             ? Str::start($extra, '/')
             : '';
 
         return $this->basePath('helpers' . $extra);
+    }
+
+    /**
+     * Return the engine's lang path.
+     */
+    protected function langPath(): string
+    {
+        return $this->basePath('resources/lang');
     }
 }

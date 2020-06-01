@@ -23,7 +23,7 @@ trait ManagesNames
     /**
      * Return the engine's name.
      */
-    public function getEngineName(): string
+    protected function getEngineName(): string
     {
         if (!$this->engineName) {
             $engineName = static::class;
@@ -39,7 +39,7 @@ trait ManagesNames
     /**
      * Return the engine's namespace and append the given extra if needed.
      */
-    public function getNamespace(string $extra = null): string
+    protected function getNamespace(string $extra = null): string
     {
         if (!$this->namespace) {
             $this->namespace = $this->getReflectedEngine()->getNamespaceName();
@@ -49,15 +49,10 @@ trait ManagesNames
     }
 
     /**
-     * Return the engine's controllers namespace and append the given extra if
-     * needed.
+     * Return the engine's controllers namespace.
      */
-    public function getControllersNamespace(string $extra = null): string
+    protected function getControllersNamespace(): string
     {
-        $extra = $extra
-            ? Str::start($extra, '\\')
-            : '';
-
-        return $this->getNamespace('Controllers' . $extra);
+        return $this->getNamespace('Controllers');
     }
 }

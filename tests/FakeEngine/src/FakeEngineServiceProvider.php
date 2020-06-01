@@ -40,5 +40,9 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         // Listeners / Subscribers
         $this->addListener('fake-engine:fake-event', HelloWorldListener::class);
         $this->addSubscriber(HelloWorldSubscriber::class);
+
+        // Translations
+        $this->loadTranslations();
+        $this->loadTranslations('CustomNamespace');
     }
 }

@@ -12,7 +12,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesPaths,
         ManagesHelpers,
         ManagesCommands,
-        ManagesListeners;
+        ManagesListeners,
+        ManagesTranslations;
 
     /**
      * The engine's reflection.
