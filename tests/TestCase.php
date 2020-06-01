@@ -54,7 +54,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
         parent::getEnvironmentSetUp($app);
 
         // Prevents an awful bug from happening. Without this line The Kernel
-        // instance use by the EngineService provider won't be the same as the
+        // instance used by the EngineServiceProvider won't be the same as the
         // one used in the TestCase. (This issue only happens with orchestra)
         $app->make(Kernel::class);
     }
