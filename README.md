@@ -23,12 +23,12 @@ package's code instead of the framework internals.
 
 - Manage Middlewares and middleware groups
 - Load private views
-- Load view components?
 - Publishable groups
 - Assets symlink
 - Assets autoloading
 - Install command (publish + tasks)
 - Install tasks
+- Autoload commands
 
 - Facades?
 - Add helpers to get the engine's name everywhere

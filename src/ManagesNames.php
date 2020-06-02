@@ -53,7 +53,7 @@ trait ManagesNames
      */
     protected function getControllersNamespace(): string
     {
-        return $this->getNamespace('Controllers');
+        return $this->getNamespace('Http\Controllers');
     }
 
     /**

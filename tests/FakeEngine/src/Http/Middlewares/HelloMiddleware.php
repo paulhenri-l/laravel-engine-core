@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares;
+namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares;
 
 class HelloMiddleware
 {

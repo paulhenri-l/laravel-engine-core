@@ -4,9 +4,9 @@ namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands\HelloWorldCommand;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Bonjour;
 

@@ -3,7 +3,7 @@
 namespace PaulhenriL\LaravelEngine\Tests\Feature;
 
 use Illuminate\Routing\Router;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
 use PaulhenriL\LaravelEngine\Tests\TestCase;
 
 class ManagesRoutesTest extends TestCase

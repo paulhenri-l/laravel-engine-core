@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands;
+namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands;
 
 use Illuminate\Console\Command;
 
