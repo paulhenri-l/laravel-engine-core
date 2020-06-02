@@ -51,5 +51,9 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
         // Migrations
         $this->loadMigrations();
+
+        // Views
+        $this->loadViews();
+        $this->loadViews('CustomNamespace');
     }
 }

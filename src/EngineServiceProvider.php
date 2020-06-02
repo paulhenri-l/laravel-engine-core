@@ -16,7 +16,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesListeners,
         ManagesTranslations,
         ManagesMigrations,
-        ManagesConfig;
+        ManagesConfig,
+        ManagesViews;
 
     /**
      * The engine's reflection.
@@ -24,14 +25,6 @@ class EngineServiceProvider extends ServiceProvider
      * @var ReflectionClass
      */
     protected $reflectedEngine;
-
-    /**
-     * The engine's configuration publishable config group.
-     */
-    protected function configGroup(): string
-    {
-        return Str::snake($this->getEngineName()) . '_config';
-    }
 
     /**
      * Return the engine's reflection.

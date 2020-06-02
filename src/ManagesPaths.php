@@ -81,4 +81,12 @@ trait ManagesPaths
 
         return $this->basePath('config' . $extra);
     }
+
+    /**
+     * Return the engine's views path.
+     */
+    protected function viewsPath(): string
+    {
+        return $this->basePath('resources/views');
+    }
 }

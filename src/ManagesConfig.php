@@ -26,4 +26,12 @@ trait ManagesConfig
             ], $this->configGroup());
         }
     }
+
+    /**
+     * The engine's configuration publishable group.
+     */
+    protected function configGroup(): string
+    {
+        return Str::snake($this->getEngineName()) . '_config';
+    }
 }
