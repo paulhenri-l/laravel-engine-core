@@ -29,6 +29,7 @@ package's code instead of the framework internals.
 - Install command (publish + tasks)
 - Install tasks
 - Autoload commands
+- Autoload config
 
 - Facades?
 - Add helpers to get the engine's name everywhere
