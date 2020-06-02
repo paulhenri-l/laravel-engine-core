@@ -22,7 +22,6 @@ package's code instead of the framework internals.
 ## TODO
 
 - Manage Middlewares and middleware groups
-- Load views
 - Load private views
 - Load view components?
 - Publishable groups

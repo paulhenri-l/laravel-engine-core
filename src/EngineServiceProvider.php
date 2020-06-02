@@ -3,7 +3,6 @@
 namespace PaulhenriL\LaravelEngine;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 use ReflectionClass;
 
 class EngineServiceProvider extends ServiceProvider
@@ -17,7 +16,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesTranslations,
         ManagesMigrations,
         ManagesConfig,
-        ManagesViews;
+        ManagesViews,
+        ManagesViewComponents;
 
     /**
      * The engine's reflection.

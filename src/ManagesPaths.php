@@ -89,4 +89,17 @@ trait ManagesPaths
     {
         return $this->basePath('resources/views');
     }
+
+    /**
+     * Return the engine's view components path and add the given extra path if
+     * needed.
+     */
+    protected function viewComponentsPath(string $extra = null): string
+    {
+        $extra = $extra
+            ? Str::start($extra, '/')
+            : '';
+
+        return $this->basePath('src/View/Components' . $extra);
+    }
 }

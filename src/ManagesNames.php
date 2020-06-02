@@ -55,4 +55,18 @@ trait ManagesNames
     {
         return $this->getNamespace('Controllers');
     }
+
+    /**
+     * Return the engine's view components namespace and append the given extra
+     * if needed.
+     */
+    protected function getViewComponentsNamespace(string $extra = null)
+    {
+        $extra = $extra
+            ? Str::start($extra, '\\')
+            : '';
+
+        return $this->getNamespace('View\Components' . $extra);
+    }
+
 }

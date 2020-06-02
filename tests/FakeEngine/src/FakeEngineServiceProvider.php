@@ -8,6 +8,7 @@ use PaulhenriL\LaravelEngine\Tests\FakeEngine\Commands\HelloWorldCommand;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Middlewares\HelloMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Bonjour;
 
 class FakeEngineServiceProvider extends EngineServiceProvider
 {
@@ -52,8 +53,12 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         // Migrations
         $this->loadMigrations();
 
-        // Views
+        // Views & Components
         $this->loadViews();
         $this->loadViews('CustomNamespace');
+        $this->loadViewComponents([Bonjour::class]);
+        $this->loadViewComponents([Bonjour::class], 'custom');
+        $this->autoloadViewComponents();
+        $this->autoloadViewComponents('custom');
     }
 }
