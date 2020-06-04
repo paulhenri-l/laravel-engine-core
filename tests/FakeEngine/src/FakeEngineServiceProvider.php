@@ -6,6 +6,8 @@ use Illuminate\Console\Scheduling\Schedule;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Bonjour;
@@ -60,5 +62,13 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         $this->loadViewComponents([Bonjour::class], 'custom');
         $this->autoloadViewComponents();
         $this->autoloadViewComponents('custom');
+
+        // Middlewares
+        $this->appendApiMiddleware(AppendedMiddleware::class);
+        $this->prependApiMiddleware(PrependedMiddleware::class);
+        $this->appendWebMiddleware(AppendedMiddleware::class);
+        $this->prependWebMiddleware(PrependedMiddleware::class);
+        $this->appendGlobalMiddleware(AppendedMiddleware::class);
+        $this->prependGlobalMiddleware(PrependedMiddleware::class);
     }
 }

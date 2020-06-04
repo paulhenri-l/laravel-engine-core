@@ -21,7 +21,6 @@ package's code instead of the framework internals.
 
 ## TODO
 
-- Manage Middlewares and middleware groups
 - Load private views
 - Publishable groups
 - Assets symlink
