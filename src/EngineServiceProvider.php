@@ -18,7 +18,8 @@ class EngineServiceProvider extends ServiceProvider
         ManagesConfig,
         ManagesViews,
         ManagesViewComponents,
-        ManagesMiddlewares;
+        ManagesMiddlewares,
+        ManagesAssets;
 
     /**
      * The engine's reflection.

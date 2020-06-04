@@ -23,7 +23,7 @@ class ManagesViewsTest extends TestCase
         );
     }
 
-    public function test_that_the_config_is_publishable()
+    public function test_that_the_views_are_publishable()
     {
         $viewsGroup = ServiceProvider::$publishGroups['fake_engine_views'];
 

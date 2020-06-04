@@ -67,7 +67,7 @@ trait ManagesMiddlewares
     protected function appendMiddlewareToGroup(
         string $group,
         string $middleware
-    ) {
+    ): void {
         $this->getHttpKernel()->appendMiddlewareToGroup($group, $middleware);
     }
 
@@ -77,7 +77,7 @@ trait ManagesMiddlewares
     protected function prependMiddlewareToGroup(
         string $group,
         string $middleware
-    ) {
+    ): void {
         $this->getHttpKernel()->prependMiddlewareToGroup($group, $middleware);
     }
 

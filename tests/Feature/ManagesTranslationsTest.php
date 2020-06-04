@@ -2,6 +2,7 @@
 
 namespace PaulhenriL\LaravelEngine\Tests\Feature;
 
+use Illuminate\Support\ServiceProvider;
 use PaulhenriL\LaravelEngine\Tests\TestCase;
 
 class ManagesTranslationsTest extends TestCase
@@ -23,6 +24,16 @@ class ManagesTranslationsTest extends TestCase
         $this->assertEquals(
             'Bonjour le monde !',
             trans('CustomNamespace::greetings.hello_world')
+        );
+    }
+
+    public function test_that_the_translations_are_publishable()
+    {
+        $translationsGroup = ServiceProvider::$publishGroups['fake_engine_translations'];
+
+        $this->assertContains(
+            resource_path('lang/vendor/FakeEngine'),
+            $translationsGroup
         );
     }
 }

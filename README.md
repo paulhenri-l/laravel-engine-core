@@ -35,6 +35,7 @@ package's code instead of the framework internals.
 - Check if we can isolate everything (cache, session etc...) but it might not be needed
 
 ## TODO Dev experience
+
 - Assets compilation (install console or skeleton)
 - Generators (console)
 - Database factories

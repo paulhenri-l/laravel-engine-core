@@ -102,4 +102,12 @@ trait ManagesPaths
 
         return $this->basePath('src/View/Components' . $extra);
     }
+
+    /**
+     * Return the engine's assets path.
+     */
+    protected function assetsPath(): string
+    {
+        return $this->basePath('public');
+    }
 }

@@ -70,5 +70,8 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         $this->prependWebMiddleware(PrependedMiddleware::class);
         $this->appendGlobalMiddleware(AppendedMiddleware::class);
         $this->prependGlobalMiddleware(PrependedMiddleware::class);
+
+        // Assets
+        $this->loadAssets();
     }
 }
