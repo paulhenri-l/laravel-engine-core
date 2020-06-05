@@ -2,6 +2,7 @@
 
 namespace PaulhenriL\LaravelEngine;
 
+use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Foundation\CachesConfiguration;
 use Illuminate\Support\Str;
 
@@ -36,10 +37,27 @@ trait ManagesConfig
         return Str::snake($this->getEngineName()) . '_config';
     }
 
+    /**
+     * Merge the given config in the given key. This is useful to share config
+     * with another engine or package.
+     */
     protected function shareConfig(string $key, array $config): void
     {
-        if (! ($this->app instanceof CachesConfiguration && $this->app->configurationIsCached())) {
-            // TODO
+        if ($this->configIsCached()) {
+            return;
         }
+
+        config()->set($key, array_merge(
+            config()->get($key), $config
+        ));
+    }
+
+    /**
+     * Is the config cached?
+     */
+    protected function configIsCached(): bool
+    {
+        return $this->app instanceof CachesConfiguration
+            && $this->app->configurationIsCached();
     }
 }

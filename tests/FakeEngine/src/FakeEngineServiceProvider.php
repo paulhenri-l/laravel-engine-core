@@ -84,5 +84,10 @@ class FakeEngineServiceProvider extends EngineServiceProvider
             SilentInstallTask::class,
             SymlinkAssets::class
         ]);
+
+        // Config
+        $this->shareConfig('other_engine.some_node', [
+            'bar'
+        ]);
     }
 }

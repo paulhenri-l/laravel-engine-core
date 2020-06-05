@@ -20,4 +20,11 @@ class ManagesConfigTest extends TestCase
         $this->assertContains(config_path('fake_engine.php'), $configGroup);
         $this->assertContains(config_path('other_config.php'), $configGroup);
     }
+
+    public function test_that_config_can_be_shared()
+    {
+        $this->assertEquals([
+            'foo', 'bar'
+        ], config('other_engine.some_node'));
+    }
 }

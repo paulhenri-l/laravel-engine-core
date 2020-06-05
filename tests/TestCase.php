@@ -52,6 +52,10 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'driver' => 'sqlite',
             'database' => ':memory:',
         ]);
+
+        $app->make('config')->set('other_engine.some_node', [
+            'foo'
+        ]);
     }
 
     protected function getPackageProviders($app)
