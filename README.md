@@ -22,7 +22,6 @@ package's code instead of the framework internals.
 ## TODO
 
 - Load private views
-- Publishable groups
 - Assets symlink
 - Assets autoloading
 - Install command (publish + tasks)

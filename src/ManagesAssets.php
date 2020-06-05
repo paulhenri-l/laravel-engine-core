@@ -9,7 +9,7 @@ trait ManagesAssets
     /**
      * Load the engine's assets in the parent application.
      */
-    public function loadAssets()
+    public function loadAssets(): void
     {
         $this->publishes([
             $this->assetsPath() => public_path('vendor/' . $this->getEngineName()),

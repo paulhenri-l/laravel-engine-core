@@ -7,19 +7,20 @@ use ReflectionClass;
 
 class EngineServiceProvider extends ServiceProvider
 {
-    use ManagesRoutes,
+    use ManagesAssets,
+        ManagesCommands,
+        ManagesConfig,
+        ManagesHelpers,
+        ManagesInstall,
+        ManagesListeners,
+        ManagesMiddlewares,
+        ManagesMigrations,
         ManagesNames,
         ManagesPaths,
-        ManagesHelpers,
-        ManagesCommands,
-        ManagesListeners,
+        ManagesRoutes,
         ManagesTranslations,
-        ManagesMigrations,
-        ManagesConfig,
-        ManagesViews,
         ManagesViewComponents,
-        ManagesMiddlewares,
-        ManagesAssets;
+        ManagesViews;
 
     /**
      * The engine's reflection.

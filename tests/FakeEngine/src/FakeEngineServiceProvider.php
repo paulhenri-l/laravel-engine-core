@@ -3,6 +3,7 @@
 namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
+use PaulhenriL\LaravelEngine\Console\InstallTasks\PublishEverything;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
@@ -73,5 +74,10 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
         // Assets
         $this->loadAssets();
+
+        // Installation
+        $this->addInstallCommand([
+            PublishEverything::class
+        ]);
     }
 }
