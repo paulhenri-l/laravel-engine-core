@@ -5,7 +5,7 @@ namespace PaulhenriL\LaravelEngine;
 use Illuminate\Support\ServiceProvider;
 use ReflectionClass;
 
-class EngineServiceProvider extends ServiceProvider
+abstract class EngineServiceProvider extends ServiceProvider
 {
     use ManagesAssets,
         ManagesCommands,

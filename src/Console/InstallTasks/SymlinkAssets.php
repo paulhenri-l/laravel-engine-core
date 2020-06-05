@@ -2,17 +2,52 @@
 
 namespace PaulhenriL\LaravelEngine\Console\InstallTasks;
 
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Storage;
 use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
 
 class SymlinkAssets implements InstallTaskInterface
 {
     /**
+     * The Filesystem instance.
+     *
+     * @var Filesystem
+     */
+    protected $files;
+
+    /**
+     * SymlinkAssets constructor.
+     */
+    public function __construct(Filesystem $files)
+    {
+        $this->files = $files;
+    }
+
+    /**
      * Publish the engine's assets.
      */
     public function run(InstallCommand $command): void
     {
-//        $command->call('vendor:publish', [
-//            '--tag' => [Str::snake($command->getEngineName()) . '_assets']
-//        ]);
+        $source = $command->getEngine()->assetsPath();
+        $engineName = $command->getEngine()->getEngineName();
+        $dest = public_path('vendor/' . $engineName);
+
+        if (!$this->files->exists(public_path('vendor'))) {
+            $this->files->makeDirectory(public_path('vendor'));
+        }
+
+        if (!$this->files->exists($dest)) {
+            $this->files->link($source, $dest);
+        }
+
+
+        $output = '';
+        $output .= '<info>Symlinked Directory</info> ';
+        $output .= "<comment>[$source]</comment> ";
+        $output .= "<info>To</info> ";
+        $output .= "<comment>[/public/vendor/{$engineName}]</comment>";
+
+        $command->getOutput()->writeln($output);
+        $command->info('Symlinking complete.');
     }
 }

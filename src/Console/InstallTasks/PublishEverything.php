@@ -12,7 +12,7 @@ class PublishEverything implements InstallTaskInterface
     public function run(InstallCommand $command): void
     {
         $command->call('vendor:publish', [
-            '--provider' => $command->getEngineServiceProviderClass()
+            '--provider' => get_class($command->getEngine())
         ]);
     }
 }

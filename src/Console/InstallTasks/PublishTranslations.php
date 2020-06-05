@@ -13,7 +13,9 @@ class PublishTranslations implements InstallTaskInterface
     public function run(InstallCommand $command): void
     {
         $command->call('vendor:publish', [
-            '--tag' => [Str::snake($command->getEngineName()) . '_translations']
+            '--tag' => [
+                Str::snake($command->getEngine()->getEngineName()) . '_translations'
+            ]
         ]);
     }
 }

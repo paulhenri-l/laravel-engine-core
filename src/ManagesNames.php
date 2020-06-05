@@ -23,7 +23,7 @@ trait ManagesNames
     /**
      * Return the engine's name.
      */
-    protected function getEngineName(): string
+    public function getEngineName(): string
     {
         if (!$this->engineName) {
             $engineName = static::class;
@@ -39,7 +39,7 @@ trait ManagesNames
     /**
      * Return the engine's namespace and append the given extra if needed.
      */
-    protected function getNamespace(string $extra = null): string
+    public function getNamespace(string $extra = null): string
     {
         if (!$this->namespace) {
             $this->namespace = $this->getReflectedEngine()->getNamespaceName();
@@ -51,7 +51,7 @@ trait ManagesNames
     /**
      * Return the engine's controllers namespace.
      */
-    protected function getControllersNamespace(): string
+    public function getControllersNamespace(): string
     {
         return $this->getNamespace('Http\Controllers');
     }
@@ -60,7 +60,7 @@ trait ManagesNames
      * Return the engine's view components namespace and append the given extra
      * if needed.
      */
-    protected function getViewComponentsNamespace(string $extra = null)
+    public function getViewComponentsNamespace(string $extra = null)
     {
         $extra = $extra
             ? Str::start($extra, '\\')
@@ -68,5 +68,4 @@ trait ManagesNames
 
         return $this->getNamespace('View\Components' . $extra);
     }
-
 }

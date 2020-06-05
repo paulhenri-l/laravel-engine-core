@@ -22,11 +22,7 @@ trait ManagesInstallCommand
         }
 
         Artisan::starting(function (Application $artisan) use ($tasks) {
-            $artisan->add(new InstallCommand(
-                static::class,
-                $this->getEngineName(),
-                $tasks
-            ));
+            $artisan->add(new InstallCommand($this, $tasks));
         });
     }
 }

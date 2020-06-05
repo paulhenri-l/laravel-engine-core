@@ -16,7 +16,7 @@ trait ManagesPaths
     /**
      * Return the engine's path and add the given extra path if needed.
      */
-    protected function basePath(string $extra = null): string
+    public function basePath(string $extra = null): string
     {
         if (!$this->engineBasePath) {
             $engineBasePath = $this->getReflectedEngine()->getFileName();
@@ -33,7 +33,7 @@ trait ManagesPaths
     /**
      * Return the engine's routes path and add the given extra path if needed.
      */
-    protected function routesPath(string $extra = null): string
+    public function routesPath(string $extra = null): string
     {
         $extra = $extra
             ? Str::start($extra, '/')
@@ -45,7 +45,7 @@ trait ManagesPaths
     /**
      * Return the engine's helpers path and add the given extra path if needed.
      */
-    protected function helpersPath(string $extra = null): string
+    public function helpersPath(string $extra = null): string
     {
         $extra = $extra
             ? Str::start($extra, '/')
@@ -57,7 +57,7 @@ trait ManagesPaths
     /**
      * Return the engine's lang path.
      */
-    protected function langPath(): string
+    public function langPath(): string
     {
         return $this->basePath('resources/lang');
     }
@@ -65,7 +65,7 @@ trait ManagesPaths
     /**
      * Return the engine's migrations path.
      */
-    protected function migrationsPath(): string
+    public function migrationsPath(): string
     {
         return $this->basePath('migrations');
     }
@@ -73,7 +73,7 @@ trait ManagesPaths
     /**
      * Return the engine's config path and add the given extra path if needed.
      */
-    protected function configPath(string $extra = null): string
+    public function configPath(string $extra = null): string
     {
         $extra = $extra
             ? Str::start($extra, '/')
@@ -85,7 +85,7 @@ trait ManagesPaths
     /**
      * Return the engine's views path.
      */
-    protected function viewsPath(): string
+    public function viewsPath(): string
     {
         return $this->basePath('resources/views');
     }
@@ -94,19 +94,15 @@ trait ManagesPaths
      * Return the engine's view components path and add the given extra path if
      * needed.
      */
-    protected function viewComponentsPath(string $extra = null): string
+    public function viewComponentsPath(): string
     {
-        $extra = $extra
-            ? Str::start($extra, '/')
-            : '';
-
-        return $this->basePath('src/View/Components' . $extra);
+        return $this->basePath('src/View/Components');
     }
 
     /**
      * Return the engine's assets path.
      */
-    protected function assetsPath(): string
+    public function assetsPath(): string
     {
         return $this->basePath('public');
     }

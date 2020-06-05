@@ -6,23 +6,17 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use PaulhenriL\LaravelEngine\Console\IndentedOutput;
 use PaulhenriL\LaravelEngine\Console\InstallTasks\InstallTaskInterface;
+use PaulhenriL\LaravelEngine\EngineServiceProvider;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class InstallCommand extends Command
 {
     /**
-     * The engine's service provider class.
+     * The engine's service provider instance.
      *
-     * @var string
+     * @var EngineServiceProvider
      */
-    protected $engineServiceProviderClass;
-
-    /**
-     * The engine's name.
-     *
-     * @var string
-     */
-    protected $engineName;
+    protected $engine;
 
     /**
      * The name and signature of the console command.
@@ -55,16 +49,13 @@ class InstallCommand extends Command
     /**
      * Create a new command instance.
      */
-    public function __construct(
-        string $engineServiceProviderClass,
-        string $engineName,
-        array $installTasks
-    ) {
-        $this->engineServiceProviderClass = $engineServiceProviderClass;
-        $this->engineName = $engineName;
+    public function __construct(EngineServiceProvider $engine, array $tasks) {
+        $this->engine = $engine;
+
+        $engineName = $engine->getEngineName();
         $this->signature = Str::kebab($engineName) . ':install';
         $this->description = 'Install ' . $engineName . ' in your application';
-        $this->installTasks = $installTasks;
+        $this->installTasks = $tasks;
 
         parent::__construct();
     }
@@ -83,7 +74,7 @@ class InstallCommand extends Command
         }
 
         $this->indentOutput(0);
-        $this->info($this->engineName . ' installed 🎉');
+        $this->info($this->engine->getEngineName() . ' installed 🎉');
     }
 
     /**
@@ -103,19 +94,11 @@ class InstallCommand extends Command
     }
 
     /**
-     * The engine's service provider class.
+     * Return an instance of the engine
      */
-    public function getEngineServiceProviderClass(): string
+    public function getEngine(): EngineServiceProvider
     {
-        return $this->engineServiceProviderClass;
-    }
-
-    /**
-     * Return the engine's name.
-     */
-    public function getEngineName(): string
-    {
-        return $this->engineName;
+        return $this->engine;
     }
 
     /**
