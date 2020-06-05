@@ -11,7 +11,7 @@ class EngineServiceProvider extends ServiceProvider
         ManagesCommands,
         ManagesConfig,
         ManagesHelpers,
-        ManagesInstall,
+        ManagesInstallCommand,
         ManagesListeners,
         ManagesMiddlewares,
         ManagesMigrations,

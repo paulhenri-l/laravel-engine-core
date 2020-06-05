@@ -9,6 +9,8 @@ use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\InstallTasks\HelloWorldInstallTask;
+use PaulhenriL\LaravelEngine\Tests\FakeEngine\InstallTasks\SilentInstallTask;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Bonjour;
@@ -77,7 +79,8 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
         // Installation
         $this->addInstallCommand([
-            PublishEverything::class
+            HelloWorldInstallTask::class,
+            SilentInstallTask::class
         ]);
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Console\Application;
 use Illuminate\Console\Application as Artisan;
 use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
 
-trait ManagesInstall
+trait ManagesInstallCommand
 {
     /**
      * Add a command to install the engine in the parent application.
