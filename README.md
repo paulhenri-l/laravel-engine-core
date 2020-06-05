@@ -22,16 +22,10 @@ package's code instead of the framework internals.
 ## TODO
 
 - Load private views
-- Assets symlink
 - Assets autoloading
-- Install command (publish + tasks)
-- Install tasks
 - Autoload commands
 - Autoload config
-
 - Facades?
-- Add helpers to get the engine's name everywhere
-- Check if we can isolate everything (cache, session etc...) but it might not be needed
 
 ## TODO Dev experience
 
