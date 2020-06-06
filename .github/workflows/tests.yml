@@ -46,8 +46,8 @@ jobs:
       - name: Test with phpunit
         run: vendor/bin/phpunit --coverage-clover clover.xml
 
-    - uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        flags: ${{ matrix.php-versions }}
-        file: ./clover.xml
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: ${{ matrix.php-versions }}
+          file: ./clover.xml
