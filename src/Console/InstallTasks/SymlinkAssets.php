@@ -48,7 +48,6 @@ class SymlinkAssets implements InstallTaskInterface
         $output .= "<comment>[/public/vendor/{$engineName}]</comment>";
 
         $command->getOutput()->writeln($output);
-        dump($output);
         $command->info('Symlinking complete.');
     }
 }
