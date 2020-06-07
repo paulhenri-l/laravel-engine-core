@@ -3,7 +3,6 @@
 namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
-use PaulhenriL\LaravelEngine\Console\InstallTasks\SymlinkAssets;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
@@ -24,6 +23,7 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
         // Config
         $this->registerConfig();
+        $this->registerAndAutoloadConfig();
         $this->registerConfig('other_config');
     }
 

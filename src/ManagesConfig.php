@@ -29,6 +29,20 @@ trait ManagesConfig
     }
 
     /**
+     * Autoload and register all of the engine's config files.
+     */
+    public function registerAndAutoloadConfig(bool $publishable = true)
+    {
+        foreach (glob($this->configPath('*'), GLOB_NOSORT) as $configFile) {
+            $configName = explode('/', $configFile);
+            $configName = array_slice($configName, -1, 1)[0];
+            $configName = str_replace('.php', '', $configName);
+
+            $this->registerConfig($configName, $publishable);
+        }
+    }
+
+    /**
      * The engine's configuration publishable group.
      */
     protected function configGroup(): string
