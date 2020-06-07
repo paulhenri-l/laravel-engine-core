@@ -26,6 +26,7 @@ package's code instead of the framework internals.
 - Autoload commands
 - Autoload config
 - Facades?
+- ShareJs? With engine namespacing
 
 ## TODO Dev experience
 

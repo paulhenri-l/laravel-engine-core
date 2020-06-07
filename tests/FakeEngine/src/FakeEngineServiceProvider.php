@@ -3,7 +3,7 @@
 namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
-use PaulhenriL\LaravelEngine\Console\InstallTasks\PublishEverything;
+use PaulhenriL\LaravelEngine\Console\InstallTasks\SymlinkAssets;
 use PaulhenriL\LaravelEngine\EngineServiceProvider;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
 use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
@@ -29,6 +29,13 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
     public function boot()
     {
+        // Assets
+        $this->loadAssets();
+        $this->autoloadJs();
+        $this->autoloadCss();
+        $this->autoloadJs(['js/custom_app.js']);
+        $this->autoloadCss(['css/custom_app.css']);
+
         // Routes
         $this->loadWebRoutes();
         $this->loadApiRoutes();
@@ -73,9 +80,6 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         $this->prependWebMiddleware(PrependedMiddleware::class);
         $this->appendGlobalMiddleware(AppendedMiddleware::class);
         $this->prependGlobalMiddleware(PrependedMiddleware::class);
-
-        // Assets
-        $this->loadAssets();
 
         // Installation
         $this->addInstallCommand([

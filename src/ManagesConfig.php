@@ -2,7 +2,6 @@
 
 namespace PaulhenriL\LaravelEngine;
 
-use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Foundation\CachesConfiguration;
 use Illuminate\Support\Str;
 
@@ -48,7 +47,7 @@ trait ManagesConfig
         }
 
         config()->set($key, array_merge(
-            config()->get($key), $config
+            config()->get($key) ?? [], $config
         ));
     }
 

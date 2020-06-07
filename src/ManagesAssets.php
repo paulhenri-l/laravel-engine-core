@@ -3,6 +3,8 @@
 namespace PaulhenriL\LaravelEngine;
 
 use Illuminate\Support\Str;
+use PaulhenriL\LaravelEngine\Middlewares\AutoloadScripts;
+use PaulhenriL\LaravelEngine\Middlewares\AutoloadStyles;
 
 trait ManagesAssets
 {
@@ -14,6 +16,34 @@ trait ManagesAssets
         $this->publishes([
             $this->assetsPath() => public_path('vendor/' . $this->getEngineName()),
         ], $this->assetsGroup());
+    }
+
+    /**
+     * Automatically load the given scripts.
+     */
+    public function autoloadJs(array $scripts = null): void
+    {
+        $scripts = $scripts ?? ['js/app.js'];
+
+        $this->appendWebMiddleware(
+            AutoloadScripts::class . ':' .
+            $this->getEngineName() . ',' .
+            base64_encode(serialize($scripts))
+        );
+    }
+
+    /**
+     * Automatically load the given styles.
+     */
+    public function autoloadCss(array $styles = null): void
+    {
+        $styles = $styles ?? ['css/app.css'];
+
+        $this->appendWebMiddleware(
+            AutoloadStyles::class . ':' .
+            $this->getEngineName() . ',' .
+            base64_encode(serialize($styles))
+        );
     }
 
     /**
