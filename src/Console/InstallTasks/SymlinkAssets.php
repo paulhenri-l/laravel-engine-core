@@ -3,7 +3,6 @@
 namespace PaulhenriL\LaravelEngine\Console\InstallTasks;
 
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Storage;
 use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
 
 class SymlinkAssets implements InstallTaskInterface

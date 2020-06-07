@@ -3,8 +3,6 @@
 namespace PaulhenriL\LaravelEngine;
 
 use Illuminate\Support\Str;
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
 
 trait ManagesViewComponents
 {
@@ -14,7 +12,7 @@ trait ManagesViewComponents
     public function autoloadViewComponents(string $prefix = null): void
     {
         $this->loadViewComponents(
-            $this->getAvailableViewComponents(),
+            $this->getClassesInSrc('View/Components'),
             $prefix
         );
     }
@@ -29,35 +27,5 @@ trait ManagesViewComponents
         $prefix = $prefix ?? Str::kebab($this->getEngineName());
 
         $this->loadViewComponentsAs($prefix, $components);
-    }
-
-    /**
-     * Return all of the view components this engine has.
-     */
-    protected function getAvailableViewComponents(): array
-    {
-        $viewComponentsPath = $this->viewComponentsPath();
-        $viewComponentFiles = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($viewComponentsPath)
-        );
-
-        $viewComponents = [];
-
-        foreach ($viewComponentFiles as $viewComponentFile) {
-            if ($viewComponentFile->isDir()){
-                continue;
-            }
-
-            $viewComponent = $viewComponentFile->getPathname();
-            $viewComponent = str_replace($viewComponentsPath . '/', '', $viewComponent);
-            $viewComponent = str_replace('.php', '', $viewComponent);
-            $viewComponent = str_replace('/', '\\', $viewComponent);
-
-            $viewComponents[] = $this->getViewComponentsNamespace(
-                $viewComponent
-            );
-        }
-
-        return $viewComponents;
     }
 }

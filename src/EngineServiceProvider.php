@@ -3,6 +3,9 @@
 namespace PaulhenriL\LaravelEngine;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use ReflectionClass;
 
 abstract class EngineServiceProvider extends ServiceProvider
@@ -39,5 +42,34 @@ abstract class EngineServiceProvider extends ServiceProvider
         }
 
         return $this->reflectedEngine;
+    }
+
+    /**
+     * Recursively look for php classes in the given directory.
+     */
+    protected function getClassesInSrc(string $path): array
+    {
+        $files = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator(
+                $this->basePath('/src' . Str::start($path, '/'))
+            )
+        );
+
+        $classes = [];
+
+        foreach ($files as $file) {
+            if ($file->isDir()) {
+                continue;
+            }
+
+            $command = $file->getPathname();
+            $command = str_replace($this->basePath('src') . '/', '', $command);
+            $command = str_replace('.php', '', $command);
+            $command = str_replace('/', '\\', $command);
+
+            $classes[] = $this->getNamespace($command);
+        }
+
+        return $classes;
     }
 }

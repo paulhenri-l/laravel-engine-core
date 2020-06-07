@@ -14,6 +14,17 @@ class ManagesCommandsTest extends TestCase
         )->expectsOutput('Hello World!');
     }
 
+    public function test_that_commands_can_be_autoloaded()
+    {
+        $this->artisan(
+            'fake-engine:autoloaded'
+        )->expectsOutput("I've been autoloaded");
+
+        $this->artisan(
+            'fake-engine:nested:autoloaded'
+        )->expectsOutput("I've been autoloaded");
+    }
+
     public function test_that_you_can_schedule_tasks()
     {
         /** @var Schedule $schedule */

@@ -13,12 +13,12 @@ trait ManagesInstallCommand
      */
     protected function addInstallCommand(...$tasks): void
     {
-        if (count($tasks) == 1 && is_array($tasks[0])) {
-            $tasks = $tasks[0];
-        }
-
         if(!$this->app->runningInConsole()) {
             return;
+        }
+
+        if (count($tasks) == 1 && is_array($tasks[0])) {
+            $tasks = $tasks[0];
         }
 
         Artisan::starting(function (Application $artisan) use ($tasks) {

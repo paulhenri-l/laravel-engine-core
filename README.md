@@ -22,11 +22,10 @@ package's code instead of the framework internals.
 ## TODO
 
 - Load private views
-- Assets autoloading
-- Autoload commands
 - Autoload config
 - Facades?
 - ShareJs? With engine namespacing
+- Cache what is cachable (autoloading especially)
 
 ## TODO Dev experience
 

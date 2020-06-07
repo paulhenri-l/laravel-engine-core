@@ -7,6 +7,20 @@ use Illuminate\Console\Scheduling\Schedule;
 trait ManagesCommands
 {
     /**
+     * Autoload all the commands that are in the `Console/Commands` directory.
+     */
+    public function autoloadCommands(): void
+    {
+        if (!$this->app->runningInConsole()) {
+            return;
+        }
+
+        $this->loadCommand(
+            ...$this->getClassesInSrc('Console/Commands')
+        );
+    }
+
+    /**
      * Load the given commands in the parent application.
      */
     public function loadCommand(string ...$commands): void

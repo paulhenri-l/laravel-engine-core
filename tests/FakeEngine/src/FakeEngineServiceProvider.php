@@ -49,6 +49,7 @@ class FakeEngineServiceProvider extends EngineServiceProvider
         );
 
         // Commands
+        $this->autoloadCommands();
         $this->loadCommand(HelloWorldCommand::class);
         $this->editSchedule(function (Schedule $schedule) {
             $schedule->command('fake-package:hello-world')->everyMinute();
