@@ -23,7 +23,7 @@ class FakeEngineServiceProvider extends EngineServiceProvider
 
         // Config
         $this->registerConfig();
-        $this->registerAndAutoloadConfig();
+        $this->autoregisterConfig();
         $this->registerConfig('other_config');
     }
 

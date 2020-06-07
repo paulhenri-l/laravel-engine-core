@@ -21,6 +21,9 @@ package's code instead of the framework internals.
 
 ## TODO
 
+- Autoload everything command
+- ScheduleClass
+
 - Load private views
 - Facades?
 - ShareJs? With engine namespacing

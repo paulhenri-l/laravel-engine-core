@@ -29,9 +29,9 @@ trait ManagesConfig
     }
 
     /**
-     * Autoload and register all of the engine's config files.
+     * Autoregister all of the engine's config files.
      */
-    public function registerAndAutoloadConfig(bool $publishable = true)
+    public function autoregisterConfig(bool $publishable = true)
     {
         foreach (glob($this->configPath('*'), GLOB_NOSORT) as $configFile) {
             $configName = explode('/', $configFile);

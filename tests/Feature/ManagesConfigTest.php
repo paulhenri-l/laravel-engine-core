@@ -13,7 +13,7 @@ class ManagesConfigTest extends TestCase
         $this->assertEquals(config('other_config.hola'), 'el mundo');
     }
 
-    public function test_that_the_config_can_be_autoloaded()
+    public function test_that_the_config_can_be_autoregisterd()
     {
         $this->assertEquals(config('autoloaded_config.auto'), 'loaded');
     }
