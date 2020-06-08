@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Console\InstallTasks;
+namespace PaulhenriL\LaravelEngineCore\Console\InstallTasks;
 
 use Illuminate\Support\Str;
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
 
 class PublishConfig implements InstallTaskInterface
 {

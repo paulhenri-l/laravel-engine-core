@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature\InstallTasks;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature\InstallTasks;
 
-use PaulhenriL\LaravelEngine\Console\InstallTasks\SymlinkAssets;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Console\InstallTasks\SymlinkAssets;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class SymlinkAssetsTaskTest extends TestCase
 {

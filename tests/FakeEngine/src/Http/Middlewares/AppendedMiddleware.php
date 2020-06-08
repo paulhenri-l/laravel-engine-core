@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares;
 
 class AppendedMiddleware
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine;
+namespace PaulhenriL\LaravelEngineCore;
 
 use Illuminate\Console\Application;
 use Illuminate\Console\Application as Artisan;
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
 
 trait ManagesInstallCommand
 {

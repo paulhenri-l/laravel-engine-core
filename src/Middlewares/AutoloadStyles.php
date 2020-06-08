@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Middlewares;
+namespace PaulhenriL\LaravelEngineCore\Middlewares;
 
-use PaulhenriL\LaravelEngine\Exceptions\FragmentNotFoundException;
-use PaulhenriL\LaravelEngine\Services\ResponseEditor;
+use PaulhenriL\LaravelEngineCore\Exceptions\FragmentNotFoundException;
+use PaulhenriL\LaravelEngineCore\Services\ResponseEditor;
 
 class AutoloadStyles extends AssetsAutoloaderMiddleware
 {

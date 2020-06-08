@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature;
 
 use Illuminate\Support\ServiceProvider;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class ManagesAssetsTest extends TestCase
 {
@@ -19,7 +19,6 @@ class ManagesAssetsTest extends TestCase
 
     public function test_that_app_assets_are_autoloaded()
     {
-        $this->withoutExceptionHandling();
         $response = $this->get(route('fake_engine.assets_autoloading.index'));
 
         $style = asset('vendor/FakeEngine/css/app.css');
@@ -39,7 +38,6 @@ class ManagesAssetsTest extends TestCase
 
     public function test_that_custom_assets_are_autoloaded()
     {
-        $this->withoutExceptionHandling();
         $response = $this->get(route('fake_engine.assets_autoloading.index'));
 
         $style = asset('vendor/FakeEngine/css/custom_app.css');

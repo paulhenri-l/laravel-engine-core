@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "PaulhenriL\\LaravelEngine\\": "src/"
+            "PaulhenriL\\LaravelEngineCore\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PaulhenriL\\LaravelEngine\\Tests\\": "tests/",
-            "PaulhenriL\\LaravelEngine\\Tests\\FakeEngine\\": "tests/FakeEngine/src"
+            "PaulhenriL\\LaravelEngineCore\\Tests\\": "tests/",
+            "PaulhenriL\\LaravelEngineCore\\Tests\\FakeEngine\\": "tests/FakeEngine/src"
         }
     }
 }

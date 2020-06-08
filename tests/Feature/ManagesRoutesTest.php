@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature;
 
 use Illuminate\Routing\Router;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class ManagesRoutesTest extends TestCase
 {

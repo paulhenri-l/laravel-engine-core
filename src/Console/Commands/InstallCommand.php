@@ -1,12 +1,12 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Console\Commands;
+namespace PaulhenriL\LaravelEngineCore\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use PaulhenriL\LaravelEngine\Console\IndentedOutput;
-use PaulhenriL\LaravelEngine\Console\InstallTasks\InstallTaskInterface;
-use PaulhenriL\LaravelEngine\EngineServiceProvider;
+use PaulhenriL\LaravelEngineCore\Console\IndentedOutput;
+use PaulhenriL\LaravelEngineCore\Console\InstallTasks\InstallTaskInterface;
+use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class InstallCommand extends Command

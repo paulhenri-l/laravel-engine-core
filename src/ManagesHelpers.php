@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine;
+namespace PaulhenriL\LaravelEngineCore;
 
 trait ManagesHelpers
 {

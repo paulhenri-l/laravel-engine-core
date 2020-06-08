@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Nested;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\View\Components\Nested;
 
 use Illuminate\View\Component;
 

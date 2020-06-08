@@ -1,11 +1,11 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature;
 
 use Illuminate\Support\Facades\Event;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Listeners\HelloWorldListener;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class ManagesEventsTest extends TestCase
 {

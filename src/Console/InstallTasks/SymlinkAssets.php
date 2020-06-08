@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Console\InstallTasks;
+namespace PaulhenriL\LaravelEngineCore\Console\InstallTasks;
 
 use Illuminate\Filesystem\Filesystem;
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
 
 class SymlinkAssets implements InstallTaskInterface
 {

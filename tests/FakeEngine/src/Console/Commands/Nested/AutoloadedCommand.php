@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\Nested;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Console\Commands\Nested;
 
 use Illuminate\Console\Command;
 

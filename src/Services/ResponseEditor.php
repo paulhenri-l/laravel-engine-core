@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Services;
+namespace PaulhenriL\LaravelEngineCore\Services;
 
 use Illuminate\Http\Response;
-use PaulhenriL\LaravelEngine\Exceptions\FragmentNotFoundException;
+use PaulhenriL\LaravelEngineCore\Exceptions\FragmentNotFoundException;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class ResponseEditor

@@ -1,8 +1,8 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Console\InstallTasks;
+namespace PaulhenriL\LaravelEngineCore\Console\InstallTasks;
 
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
 
 class PublishEverything implements InstallTaskInterface
 {

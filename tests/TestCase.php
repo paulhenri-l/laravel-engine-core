@@ -1,15 +1,15 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests;
+namespace PaulhenriL\LaravelEngineCore\Tests;
 
 use Illuminate\Console\Application;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\File;
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\FakeEngineServiceProvider;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\FakeEngineServiceProvider;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Listeners\HelloWorldListener;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

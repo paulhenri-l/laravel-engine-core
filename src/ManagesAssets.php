@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine;
+namespace PaulhenriL\LaravelEngineCore;
 
 use Illuminate\Support\Str;
-use PaulhenriL\LaravelEngine\Middlewares\AutoloadScripts;
-use PaulhenriL\LaravelEngine\Middlewares\AutoloadStyles;
+use PaulhenriL\LaravelEngineCore\Middlewares\AutoloadScripts;
+use PaulhenriL\LaravelEngineCore\Middlewares\AutoloadStyles;
 
 trait ManagesAssets
 {

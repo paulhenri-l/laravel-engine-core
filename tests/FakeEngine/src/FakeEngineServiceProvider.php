@@ -1,18 +1,18 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine;
 
 use Illuminate\Console\Scheduling\Schedule;
-use PaulhenriL\LaravelEngine\EngineServiceProvider;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\InstallTasks\HelloWorldInstallTask;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\InstallTasks\SilentInstallTask;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners\HelloWorldListener;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components\Bonjour;
+use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Console\Commands\HelloWorldCommand;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\HelloMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\InstallTasks\HelloWorldInstallTask;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\InstallTasks\SilentInstallTask;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Listeners\HelloWorldListener;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Subscribers\HelloWorldSubscriber;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\View\Components\Bonjour;
 
 class FakeEngineServiceProvider extends EngineServiceProvider
 {

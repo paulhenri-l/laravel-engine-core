@@ -1,11 +1,11 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature;
 
 use Illuminate\Contracts\Http\Kernel;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
-use PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\AppendedMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Middlewares\PrependedMiddleware;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class ManagesMiddlewaresTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\Feature;
+namespace PaulhenriL\LaravelEngineCore\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
-use PaulhenriL\LaravelEngine\Tests\TestCase;
+use PaulhenriL\LaravelEngineCore\Tests\TestCase;
 
 class ManagesMigrationsTest extends TestCase
 {

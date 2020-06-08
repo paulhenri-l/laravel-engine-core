@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\View\Components;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\View\Components;
 
 use Illuminate\View\Component;
 

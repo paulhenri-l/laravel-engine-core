@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Listeners;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Listeners;
 
 class HelloWorldListener
 {

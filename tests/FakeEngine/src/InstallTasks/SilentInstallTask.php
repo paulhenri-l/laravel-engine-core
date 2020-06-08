@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\InstallTasks;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\InstallTasks;
 
-use PaulhenriL\LaravelEngine\Console\Commands\InstallCommand;
-use PaulhenriL\LaravelEngine\Console\InstallTasks\InstallTaskInterface;
+use PaulhenriL\LaravelEngineCore\Console\Commands\InstallCommand;
+use PaulhenriL\LaravelEngineCore\Console\InstallTasks\InstallTaskInterface;
 
 class SilentInstallTask implements InstallTaskInterface
 {

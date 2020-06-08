@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Middlewares;
+namespace PaulhenriL\LaravelEngineCore\Middlewares;
 
 use Illuminate\Support\Str;
 

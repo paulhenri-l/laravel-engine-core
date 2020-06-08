@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Subscribers;
 
 use Illuminate\Events\Dispatcher;
 
@@ -22,7 +22,7 @@ class HelloWorldSubscriber
     {
         $events->listen(
             'fake-engine:fake-subscribed-event',
-            'PaulhenriL\LaravelEngine\Tests\FakeEngine\Subscribers\HelloWorldSubscriber@handleEvent'
+            'PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Subscribers\HelloWorldSubscriber@handleEvent'
         );
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine;
+namespace PaulhenriL\LaravelEngineCore;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;

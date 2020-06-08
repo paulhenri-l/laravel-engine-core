@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Exceptions;
+namespace PaulhenriL\LaravelEngineCore\Exceptions;
 
 class FragmentNotFoundException extends \Exception
 {

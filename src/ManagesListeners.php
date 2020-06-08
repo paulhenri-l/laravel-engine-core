@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine;
+namespace PaulhenriL\LaravelEngineCore;
 
 use Closure;
 use Illuminate\Support\Facades\Event;

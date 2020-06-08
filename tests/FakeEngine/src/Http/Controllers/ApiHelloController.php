@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelEngine\Tests\FakeEngine\Http\Controllers;
+namespace PaulhenriL\LaravelEngineCore\Tests\FakeEngine\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 
