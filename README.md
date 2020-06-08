@@ -40,3 +40,4 @@ To achieve this vision here are a few things that must be tackled.
 - Database factories
 - Load private views
 - Cache what is cachable (autoloading especially)
+- test config
