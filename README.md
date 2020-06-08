@@ -1,6 +1,6 @@
 # laravel-engine
 
-![Tests](https://github.com/paulhenri-l/laravel-engine/workflows/Tests/badge.svg)
+![Tests](https://github.com/paulhenri-l/laravel-engine-core/workflows/Tests/badge.svg)
 
 A Laravel package to help you create Laravel packages.
 
