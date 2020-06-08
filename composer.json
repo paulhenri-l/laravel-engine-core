@@ -1,6 +1,6 @@
 {
-    "name": "paulhenri-l/laravel-engine",
-    "description": "A Laravel package to help you create Laravel packages",
+    "name": "paulhenri-l/laravel-engine-core",
+    "description": "Laravel engine's core classes",
     "type": "library",
     "license": "MIT",
     "authors": [
