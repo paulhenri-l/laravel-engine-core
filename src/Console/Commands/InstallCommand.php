@@ -71,7 +71,6 @@ class InstallCommand extends Command
         $this->runTasks($this->installTasks, $this);
 
         $this->line('');
-        $this->indentOutput(0);
         $this->info($this->engine->getEngineName() . ' installed 🎉');
     }
 

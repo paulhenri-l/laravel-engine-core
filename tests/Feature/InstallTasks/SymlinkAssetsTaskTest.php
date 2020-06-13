@@ -16,8 +16,8 @@ class SymlinkAssetsTaskTest extends TestCase
 
         $this->artisan('fake-engine:install')
             ->expectsOutput('[' . SymlinkAssets::class . ']')
-            ->expectsOutput("  Symlinked Directory [{$assetsPath}] To [/public/vendor/FakeEngine]")
-            ->expectsOutput('  Symlinking complete.');
+            ->expectsOutput("Symlinked Directory [{$assetsPath}] To [/public/vendor/FakeEngine]")
+            ->expectsOutput('Symlinking complete.');
 
         $this->assertTrue(is_link($target));
     }
