@@ -11,8 +11,10 @@ class ManagesInstallCommand extends TestCase
         $this->artisan('fake-engine:install')
             ->expectsOutput('[PaulhenriL\LaravelEngineCore\Tests\FakeEngine\InstallTasks\HelloWorldInstallTask]')
             ->expectsOutput('  Hello World!')
+            ->expectsOutput('  ')
             ->expectsOutput('[PaulhenriL\LaravelEngineCore\Tests\FakeEngine\InstallTasks\SilentInstallTask]')
             ->expectsOutput('  SilentInstallTask Complete.')
+            ->expectsOutput('  ')
             ->expectsOutput('FakeEngine installed 🎉');
     }
 }

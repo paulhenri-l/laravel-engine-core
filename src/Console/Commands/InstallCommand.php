@@ -7,10 +7,13 @@ use Illuminate\Support\Str;
 use PaulhenriL\LaravelEngineCore\Console\IndentedOutput;
 use PaulhenriL\LaravelEngineCore\Console\InstallTasks\InstallTaskInterface;
 use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
+use PaulhenriL\LaravelTaskRunner\CanRunTasks;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class InstallCommand extends Command
 {
+    use CanRunTasks;
+
     /**
      * The engine's service provider instance.
      *
@@ -65,32 +68,11 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        foreach ($this->installTasks as $installTask) {
-            $this->runInstallTask(
-                $this->getLaravel()->make($installTask)
-            );
+        $this->runTasks($this->installTasks, $this);
 
-            $this->line('');
-        }
-
+        $this->line('');
         $this->indentOutput(0);
         $this->info($this->engine->getEngineName() . ' installed 🎉');
-    }
-
-    /**
-     * Run the given InstallTask.
-     */
-    protected function runInstallTask(InstallTaskInterface $installTask): void
-    {
-        $this->indentOutput(0);
-        $this->output->writeln('[' . get_class($installTask) . ']');
-
-        $output = $this->indentOutput(2);
-        $installTask->run($this);
-
-        if (!$output->hasBeenWritten()) {
-            $this->info(class_basename($installTask) .' Complete.');
-        }
     }
 
     /**
@@ -99,19 +81,5 @@ class InstallCommand extends Command
     public function getEngine(): EngineServiceProvider
     {
         return $this->engine;
-    }
-
-    /**
-     * Switch to indented output.
-     */
-    protected function indentOutput(int $indent = 4): IndentedOutput
-    {
-        if (!$this->originalOutput) {
-            $this->originalOutput = $this->output;
-        }
-
-        $this->output = new IndentedOutput($this->originalOutput, $indent);
-
-        return $this->output;
     }
 }
