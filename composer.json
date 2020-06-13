@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": "^7.2.5",
         "laravel/framework": "^7.0",
         "paulhenri-l/laravel-task-runner": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.0",
-        "phpunit/phpunit": "^8.5|^9.0"
+        "phpunit/phpunit": "^8.5"
     },
     "autoload": {
         "psr-4": {
