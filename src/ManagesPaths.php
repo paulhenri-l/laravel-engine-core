@@ -67,7 +67,7 @@ trait ManagesPaths
      */
     public function migrationsPath(): string
     {
-        return $this->basePath('migrations');
+        return $this->basePath('database/migrations');
     }
 
     /**
