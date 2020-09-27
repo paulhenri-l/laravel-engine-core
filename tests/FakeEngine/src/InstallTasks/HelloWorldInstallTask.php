@@ -7,7 +7,7 @@ use PaulhenriL\LaravelEngineCore\Console\InstallTasks\InstallTaskInterface;
 
 class HelloWorldInstallTask implements InstallTaskInterface
 {
-    public function run(InstallCommand $command): void
+    public function __invoke(InstallCommand $command): void
     {
         $command->info('Hello World!');
     }

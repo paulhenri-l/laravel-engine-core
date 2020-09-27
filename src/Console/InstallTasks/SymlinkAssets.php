@@ -25,7 +25,7 @@ class SymlinkAssets implements InstallTaskInterface
     /**
      * Publish the engine's assets.
      */
-    public function run(InstallCommand $command): void
+    public function __invoke(InstallCommand $command): void
     {
         $source = $command->getEngine()->assetsPath();
         $engineName = $command->getEngine()->getEngineName();

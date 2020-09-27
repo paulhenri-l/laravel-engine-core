@@ -10,7 +10,7 @@ class PublishAssets implements InstallTaskInterface
     /**
      * Publish the engine's assets.
      */
-    public function run(InstallCommand $command): void
+    public function __invoke(InstallCommand $command): void
     {
         $command->call('vendor:publish', [
             '--tag' => [

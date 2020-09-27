@@ -9,7 +9,7 @@ class PublishEverything implements InstallTaskInterface
     /**
      * Publish the engine's publishable files.
      */
-    public function run(InstallCommand $command): void
+    public function __invoke(InstallCommand $command): void
     {
         $command->call('vendor:publish', [
             '--provider' => get_class($command->getEngine())

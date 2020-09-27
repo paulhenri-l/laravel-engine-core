@@ -9,5 +9,5 @@ interface InstallTaskInterface
     /**
      * Run installation steps.
      */
-    public function run(InstallCommand $command): void;
+    public function __invoke(InstallCommand $command): void;
 }
