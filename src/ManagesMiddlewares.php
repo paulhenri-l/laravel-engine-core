@@ -14,7 +14,7 @@ trait ManagesMiddlewares
     protected $kernel;
 
     /**
-     * Append the given middleware to the web group.
+     * Append the given middleware to the api group.
      */
     protected function appendApiMiddleware(string $middleware): void
     {
@@ -22,7 +22,7 @@ trait ManagesMiddlewares
     }
 
     /**
-     * Prepend the given middleware to the web group.
+     * Prepend the given middleware to the api group.
      */
     protected function prependApiMiddleware(string $middleware): void
     {
