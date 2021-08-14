@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.3|^8.0",
         "laravel/framework": "^8.0",
-        "paulhenri-l/laravel-task-runner": "^3.0"
+        "paulhenri-l/laravel-task-runner": "^3.1"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
